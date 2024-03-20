@@ -6,7 +6,7 @@
 
     <groupId>com.ekotrope</groupId>
     <artifactId>gwt-completablefuture</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>GWT-CompletableFuture</name>
     <description>GWT 2.8.0 Compatible implementation of java.util.concurrent.CompletableFuture and supporting classes</description>
     <url>https://github.com/OneGeek/GWT-CompletableFuture</url>
@@ -46,14 +46,11 @@
     </licenses>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
+            <id>github</id>
+            <name>GitHub OWNER Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/keeps/GWT-CompletableFuture</url>
+          </repository>
     </distributionManagement>
 
     <build>
@@ -92,17 +89,6 @@
                     </execution>
                 </executions>
             </plugin>  
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
         </plugins>
 
     </build>
